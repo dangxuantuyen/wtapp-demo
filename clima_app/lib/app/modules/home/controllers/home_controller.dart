@@ -102,7 +102,6 @@ class HomeController extends GetxController {
     // print(position);
   }
 
-
   final count = 0.obs;
   @override
   void onInit() {
@@ -122,4 +121,18 @@ class HomeController extends GetxController {
   }
 
   void increment() => count.value++;
+
+  ///
+  ///func
+  ///
+  ///
+  ///
+  ///
+  ///
+  ///
+  ///
+  ///
+  ///
+  ///.....
+  ///
 }
