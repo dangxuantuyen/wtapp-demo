@@ -10,20 +10,27 @@ class SigninScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: Get.height,
-      // color: Colors.red,
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            TopTitle(
-              textTitle: "WEATHER APP",
+    return Scaffold(
+      body: SafeArea(
+        child: SizedBox(
+          height: Get.height,
+          // color: Colors.red,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: Get.height * 0.1,
+                ),
+                const TopTitle(
+                  textTitle: "WEATHER APP",
+                ),
+                SizedBox(
+                  height: Get.height * 0.1,
+                ),
+                FormSignin(),
+              ],
             ),
-            SizedBox(
-              height: Get.height * 0.1,
-            ),
-            FormSignin(),
-          ],
+          ),
         ),
       ),
     );

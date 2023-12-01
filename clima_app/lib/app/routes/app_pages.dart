@@ -9,12 +9,12 @@ class AppPages {
   AppPages._();
 
   // static const INITIAL = Routes.HOME;
-  static const INITIAL = Routes.HOME;
+  static const pageHome = Routes.homeView;
 
   static final routes = [
     GetPage(
       // name: _Paths.HOME,
-      name: _Paths.HOME,
+      name: _Paths.pageHome,
       page: () => HomeView(),
       binding: HomeBinding(),
     ),

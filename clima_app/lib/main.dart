@@ -7,11 +7,11 @@ import 'package:clima_app/app/modules/home/bindings/home_binding.dart' as di;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await di.HomeBinding;
+  di.HomeBinding;
   runApp(
     GetMaterialApp(
       title: "Application",
-      initialRoute: AppPages.INITIAL,
+      initialRoute: AppPages.pageHome,
       getPages: AppPages.routes,
     ),
   );

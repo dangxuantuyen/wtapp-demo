@@ -1,10 +1,7 @@
 import 'package:clima_app/app/modules/home/controllers/home_controller.dart';
-import 'package:clima_app/app/modules/home/views/widget/textformfield_password.dart';
-import 'package:clima_app/app/modules/home/views/widget/textformfield_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 
 class FormSignin extends StatelessWidget {
   FormSignin({
@@ -25,55 +22,37 @@ class FormSignin extends StatelessWidget {
             Text("lOGIN",
                 style:
                     GoogleFonts.abel(textStyle: const TextStyle(fontSize: 30))),
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: Get.height * 0.1,
             ),
-            //email
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 12),
-              child: TextFormFieldWidget(
-                  controller: controller.emailEdittingController,
-                  hintTextFormField: "Email"),
-            ),
-            //Password
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 12),
-              child: TextFormFieldWidgetPassword(
-                obscureText: controller.showPassword.value,
-                controller: controller.passWordEdittingController,
-                hintTextFormField: "Password",
-                suffixIcon: Obx(
-                    // () => GestureDetector(
-                    //   onTap: () {
-                    //     controller.ShowPassword();
-                    //   },
-                    //   child: Icon(
-                    //     controller.showPassword.value
-                    //         ? Icons.visibility
-                    //         : Icons.visibility_off,
-                    //     color: Colors.red,
-                    //   ),
-                    // ),
-                    () => IconButton(
-                        onPressed: () => controller.togglePassword(),
-                        icon: Icon(
-                          controller.showPassword.value
-                              ? Icons.visibility
-                              : Icons.visibility_off,
-                          color: Colors.red,
-                        ))),
+            Container(
+              height: Get.height * 0.1,
+              padding: EdgeInsets.symmetric(horizontal: Get.width * 0.05),
+              decoration: const BoxDecoration(
+                color: Colors.white,
               ),
-            ),
-            Align(
-              alignment: Alignment.centerRight,
-              child: TextButton(
-                  onPressed: () {}, child: const Text("For got Password")),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                controller.signinWithGoogle();
-              },
-              child: const Text("Sign In"),
+              child: ElevatedButton(
+                onPressed: () {
+                  controller.signinWithGoogle();
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Padding(
+                        padding: EdgeInsets.symmetric(vertical: 20),
+                        child: Image(
+                            image:
+                                AssetImage("assets/images/icon_google.png"))),
+                    SizedBox(
+                      height: Get.width * 0.05,
+                    ),
+                    const Text(
+                      "Sign In With Google",
+                      style: TextStyle(fontSize: 23),
+                    )
+                  ],
+                ),
+              ),
             )
           ],
         ),
