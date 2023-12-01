@@ -7,6 +7,7 @@ import '../../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
   HomeView({Key? key}) : super(key: key);
+  @override
   final HomeController controller = Get.find();
   @override
   Widget build(BuildContext context) {

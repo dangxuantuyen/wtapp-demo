@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TextFormFieldWidgetPassword extends StatelessWidget {
-  TextFormFieldWidgetPassword(
+  const TextFormFieldWidgetPassword(
       {super.key,
       required this.controller,
       required this.hintTextFormField,
@@ -10,7 +10,7 @@ class TextFormFieldWidgetPassword extends StatelessWidget {
   final TextEditingController controller;
   final String hintTextFormField;
   final Widget? suffixIcon;
-  bool? obscureText;
+  final bool? obscureText;
   // bool? showPassword;
 
   @override

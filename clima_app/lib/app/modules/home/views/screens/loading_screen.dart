@@ -10,7 +10,7 @@ class LoadingScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(color: Colors.teal),
-        child: Center(
+        child: const Center(
           child: Column(
             children: [
               Text("Loading"),

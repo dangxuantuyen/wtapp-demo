@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TextFormFieldWidget extends StatelessWidget {
-  TextFormFieldWidget(
+  const TextFormFieldWidget(
       {super.key,
       required this.controller,
       required this.hintTextFormField,
@@ -9,7 +9,7 @@ class TextFormFieldWidget extends StatelessWidget {
 
   final TextEditingController controller;
   final String hintTextFormField;
-  bool? obscureText;
+  final bool? obscureText;
 
   @override
   Widget build(BuildContext context) {
